@@ -10,7 +10,7 @@ class ApartmentSettlement(BaseModel):
     settlement_month: int
     total_bills_pln: float
     total_rent_pln: float
-    remaining_amount_pln: float
+    remaining_pln: float
 
 class Parameters(BaseModel):
     apartments_json_path: str = 'data/apartments.json'
