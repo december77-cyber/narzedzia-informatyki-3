@@ -3,6 +3,14 @@ from typing import Dict, List
 
 import json
 
+#zmienic remaining_amount_pln na remaining_pln
+class ApartmentSettlement(BaseModel):
+    apartment: str
+    settlement_year: int
+    settlement_month: int
+    total_bills_pln: float
+    total_rent_pln: float
+    remaining_pln: float
 
 class Parameters(BaseModel):
     apartments_json_path: str = 'data/apartments.json'
