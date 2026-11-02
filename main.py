@@ -46,8 +46,6 @@ class Tenant(BaseModel):
     room: str
     rent_pln: float
     deposit_pln: float
-    date_agreement_from: str
-    date_agreement_to: str
 
     @staticmethod
     def from_json_file(file_path: str) -> Dict[str,'Tenant']:
@@ -116,8 +114,8 @@ if __name__ == '__main__':
     for apartment in manager.apartments.values():
         print(f"Apartment: {apartment.key}, Name: {apartment.name}, Location: {apartment.location}, Area: {apartment.area_m2}")
         for room in apartment.rooms.values():
-            print(f"  Room: {room.name}, Area: {room.area_m2}")
-
+            print(' ', room.name, room.area_m2)
+        
         for bill in manager.bills:
             if bill.apartment == apartment.key:
                 print(f"  Bill: {bill.amount_pln}, Due: {bill.date_due}, Settlement: {bill.settlement_year}-{bill.settlement_month}, Type: {bill.type}")
