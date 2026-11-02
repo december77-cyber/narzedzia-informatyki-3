@@ -3,6 +3,7 @@ from typing import Dict, List
 
 import json
 
+#zmienic remaining_amount_pln na remaining_pln
 class ApartmentSettlement(BaseModel):
     apartment: str
     settlement_year: int
