@@ -46,8 +46,6 @@ class Tenant(BaseModel):
     room: str
     rent_pln: float
     deposit_pln: float
-    date_agreement_from: str
-    date_agreement_to: str
 
     @staticmethod
     def from_json_file(file_path: str) -> Dict[str,'Tenant']:
